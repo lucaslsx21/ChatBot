@@ -1,5 +1,7 @@
+/* Importa a fonte "Inter" do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Reset de margens e paddings, define o box-sizing e aplica a fonte global */
 * {
   margin: 0;
   padding: 0;
@@ -7,152 +9,197 @@
   font-family: "Inter", sans-serif;
 }
 
+/* Define o tamanho base da fonte para uso com rem */
 :root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
+/* Estiliza o corpo da página com uma imagem de fundo e cor do texto */
 body {
   background: url("../images/plano-fundo-furia.png");
   color: #f2f2f2;
 }
 
+/* Container principal centralizado na tela */
 .container {
   width: 100%;
   height: 100dvh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+/* Estilo do box de login */
 .login {
-    width: 100%;
-    max-width: 330px;
-    background-color: #212121;
-    border-radius: 5px;
-    padding: 20px;
-    display: none;
+  width: 100%;
+  max-width: 330px;
+  background-color: #212121;
+  border-radius: 5px;
+  padding: 20px;
 }
 
+/* Título centralizado do login */
 .login > h2 {
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
+/* Formulário de login com espaçamento entre os campos */
 .login__form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+/* Campo de entrada de texto do login */
 .login__input {
-    border: none;
-    padding: 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    background-color: #121212;
-    color: #f2f2f2;
-    outline: none;
-    border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: #121212;
+  color: #f2f2f2;
+  outline: none;
+  border-radius: 5px;
 }
 
+/* Destaque no campo de input ao receber foco */
 .login__input:focus {
-    outline: 2px solid #f2f2f2;
+  outline: 2px solid #f2f2f2;
 }
 
+/* Botão de envio do login */
 .login__button {
-    border: none;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    background-color: #ddd;
-    cursor: pointer;
-    color: #121212;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background-color: #ddd;
+  cursor: pointer;
+  color: #121212;
 }
 
+/* Efeito de hover no botão de login */
 .login__button:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
+/* Seção do chat, inicialmente oculta */
 .chat {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
+/* Área onde as mensagens serão exibidas */
 .chat__messages {
-    flex-grow: 1;
-    padding: 30px 30px 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex-grow: 1;
+  padding: 30px 30px 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Formulário de envio de mensagem, fixado na parte inferior */
 .chat__form {
-    background-color: #191919;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: #191919;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
+/* Campo de input para digitar mensagens */
 .chat__input {
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    flex-grow: 1;
-    background-color: #212121;
-    outline: none;
-    color: #f2f2f2;
-    font-size: 1rem;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  flex-grow: 1;
+  background-color: #212121;
+  outline: none;
+  color: #f2f2f2;
+  font-size: 1rem;
 }
 
+/* Botão de envio de mensagem (ícone) */
 .chat__button {
-    border: none;
-    background: none;
-    color: #f2f2f2;
-    cursor: pointer;
+  border: none;
+  background: none;
+  color: #f2f2f2;
+  cursor: pointer;
 }
 
+/* Estilo do ícone dentro do botão de envio */
 .chat__button > span {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
+/* Estilo base das mensagens enviadas ou recebidas */
 .chat__messages > div {
-    padding: 10px;
-    width: 100%;
-    max-width: 250px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-    line-height: 22px;
+  padding: 10px;
+  width: 100%;
+  max-width: 250px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  line-height: 22px;
 }
 
+/* Estilo para mensagens enviadas pelo próprio usuário */
 .message--self {
-    background-color: #f2f2f2;
-    color: #121212;
-    border-radius: 10px 10px 0 10px;
-    align-self: flex-end;
+  background-color: #f2f2f2;
+  color: #121212;
+  border-radius: 10px 10px 0 10px;
+  align-self: flex-end;
 }
 
+/* Estilo para mensagens recebidas de outros usuários */
 .message--other {
-    background-color: #333;
-    color: #f2f2f2;
-    border-radius: 0 10px 10px 10px;
-    align-self: flex-start;
+  background-color: #333;
+  color: #f2f2f2;
+  border-radius: 0 10px 10px 10px;
+  align-self: flex-start;
 }
 
+/* Nome do remetente nas mensagens recebidas */
 .message--sender {
-    display: block;
-    margin-bottom: 15px;
-    font-weight: 700;
-    color: cadetblue
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: cadetblue;
 }
+
+/* Estilo para imagens dentro das mensagens */
+.chat__messages img {
+  max-width: 200px;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Estilo para imagem de perfil (caso usada) */
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.login__subtitle {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #191919;
+    font-weight: 900;
+    font-style: italic;
+  }
+  

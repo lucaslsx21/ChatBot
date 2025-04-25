@@ -1,43 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send" />
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=send"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
     <title>ChatBot | Cover FuRiA</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+      <!-- Container principal da interface -->
     <section class="container">
-        <section class="login">
-            <h2>Login</h2>
-            <form class="login__form">
-                <input type="text" class="login__input" placeholder="Seu nome" required />
-                <button type="submit" class="login__button">Entrar</button>
-            </form>
-        </section>
+
+        <!-- Seção de login -->
+      <section class="login">
+
+        <!-- Título da seção -->
+        <h2>Login</h2>
+
+        <!-- Formulário de login -->
+        <form class="login__form">
+        <!-- Campo de entrada para o nome do usuário -->
+          <input
+            type="text"
+            class="login__input"
+            placeholder="Seu nome"
+            required
+          />
+          
+          <!-- Botão para enviar o formulário de login -->
+          <button type="submit" class="login__button">Entrar</button>
+        </form>
+      </section>
+      <p class="login__subtitle">ChatBot | Cover Furia</p>
     </section>
 
+    <!-- Seção de chat -->
     <section class="chat">
-        <section class="chat__messages">
-            <div class="message--self">Ola, Pessoal da FURIA</div>
-            
-            <div class="message--other">
-                <span class="message--sender">Fúria</span>
-                Olá, tudo bem?
-            </div>
 
-        </section>
+      <section class="chat__messages">
+        <!-- BLOCO DE TESTE: Área onde as mensagens serão exibidas -->
+        <!-- 
+        Exemplo comentado de mensagens:
+        <div class="message--self">Ola, Pessoal da FURIA</div>
+        <div class="message--other">
+            <span class="message--sender">Fúria</span>
+            Olá, tudo bem?
+        </div> 
+        -->
+      </section>
 
-        <form class="chat__form">
-            <input type="text" class="chat__input" placeholder="Digite uma mensagem" required />
-            <button type="submit" class="chat__button">
-                <span class="material-symbols-outlined">send</span>
-            </button>
-        </form>
+      <!-- Formulário para envio de mensagens no chat -->
+      <form class="chat__form">
+        <!-- Campo de entrada para digitar mensagens -->
+        <input
+          type="text"
+          class="chat__input"
+          placeholder="Digite uma mensagem"
+          required
+        />
+        <!-- Campo de upload de imagem com filtro de tipo específico -->
+        <input
+          type="file"
+          class="login__image-input"
+          accept="./images/fundo-furia.png"
+          required
+        />
+        
+        <!-- Campo de upload de imagem genérico (aceita qualquer tipo de imagem) -->
+        <input type="file" class="chat__image-input" accept="image/*" />
+
+        <!-- Botão para enviar a mensagem -->
+        <button type="submit" class="chat__button">
+            <!-- Ícone de envio dentro do botão -->
+          <span class="material-symbols-outlined">send</span>
+        </button>
+      </form>
     </section>
 
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
